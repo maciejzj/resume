@@ -1,0 +1,211 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{marginnote}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{sectsty} \geometry{
+	left = 3cm,
+	top = 2cm,
+	bottom = 2cm
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrulewidth{0pt}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\reversemarginpar
+
+\begin{document}
+\hfill
+% Contact info
+\begin{minipage}{0.5\textwidth}\raggedleft
+	{\Large \textbf{Maciej Ziaja}} \\
+	Born 22.05.1997 \\
+	Gliwicka 19 $\circ$ 44--160 Rudno \\
+	+48 729 920 048 $\circ$ maciejzj@icloud.com \\
+	maciejzj.xyz $\circ$ github.com/maciejzj
+\end{minipage}
+
+% Professional experience
+\section*{Experience}
+
+\hrule \medskip
+
+\marginnote{\small \textit{Since October 2020}}
+\textsc{KP Labs}, Gliwice \\
+\textbf{Machine Learning Software Engineer} -- Development and prototyping of
+deep neural networks for image processing with Python, deployment on embedded
+Linux devices with C++.
+\begin{itemize}
+	\item Involved in creation of \textit{U-Net} based artificial neural
+		networks and utilization of \textit{nnU-Net} framework for clouds
+		segmentation. Scored 53 out of 847 participants in competition:
+		\textit{On Cloud N: Cloud Cover Detection Challenge}.
+		Followed by several publications at \textit{IEEE} scientific conferences.
+	\item Involved in \textit{super-resolution} tasks (single-image,
+		multi-image, pansharpening) applied to satellite imagery, such as data
+		generation, dataset curation, and super-resolution deep neural networks
+		training including Transformer-based models. Followed by a publications
+		at \textit{IEEE} scientific conferences.
+	\item Curated and implemented deployment and benchmarking processes for
+		several neural networks on an embedded Linux device with a custom
+		hardware accelerator for aerospace equipment using \textit{Xilinx's Vitis
+		AI} framework in Python and C++. Deployed the optimal solution to a
+		satellite device. Followed by a publication in a \textit{MDPI}
+		scientific journal.
+	\item Curated and maintained in-house data processing and experimentation MLOps
+		systems based on DVC, MLflow, and Jenkins.
+	\item Involved in preparations and orations at various industry events such
+		as \textit{Edge Computing in Space} and \textit{International
+		Astronautical Congress}. Participated in international projects with
+		multinational teams supervised by European Space Agency. 
+\end{itemize}
+\marginnote{\small \textit{July--October 2019}}
+\textsc{Display Link}, Katowice \\
+\textbf{Intern Development Engineer} -- Embedded C++ programming in real time
+environment for video processing devices.
+
+% Academic education
+\section*{Education}
+
+\hrule \medskip
+
+% Master of Engineering
+\marginnote{\small \textit{2020--2021}}
+\textsc{Silesian University of Technology} \\
+\textbf{Master of Engineering} -- \textit{Computer Science, System Software major.} \\
+Thesis topic: \textit{Data augmentation for super-resolution reconstruction using deep convolutional neural networks}. \\
+Graduated with distinction.
+% , involved in extra curricular activities:
+% \begin{itemize}
+% 	\item{Individual course of studies -- \textit{Algorithms for autonomous
+% 		vehicles} and \textit{Hand drawn marker detection projects}.}
+% 	\item{Involved in Silesian Aerospace Technologies students group -- embedded
+% 		software and hardware design for high altitude balloons and
+% 		\textit{CubeSat} satellites prototyping.}
+% \end{itemize}
+
+% Bachelor of Engineering
+\medskip
+\marginnote{\small \textit{2016--2020}}
+\noindent
+\textsc{Silesian University of Technology} \\
+\textbf{Bachelor of Engineering} -- \textit{Automatic Control and Robotics, Information Technologies major.} \\
+Thesis topic: \textit{Grains detection in thermal images with use of neural networks}. \\
+Graduated with distinction.
+% , involved in extra curricular activities:
+% \begin{itemize}
+% 	\item{Project Based Learning individual course of studies
+% 		-- \textit{``Quad with semi-active vehicle suspension'' (ISSN 2544-3771).}}
+% \end{itemize}
+
+% Skills and tech stack
+\section*{Skills}
+
+\hrule \medskip
+
+\begin{description}
+	\item[Python programming for machine learning and scripting]
+		deep learning with \textit{Tensorflow} and \textit{PyTorch},
+		data manipulation with \textit{NumPy} and \textit{Pandas},
+		data visualization with \textit{Matplotlib} and \textit{Dash \& Plotly} combo,
+		Jupyter notebooks,
+		computer vision with \textit{Scikit-image},
+		data versioning with \textit{DVC},
+		experiment management with \textit{MLflow},
+		code quality with \textit{pytest}, \textit{flake8}, and \textit{mypy}.
+	\item[C++ programming in modern standards]
+		\textit{STL} familiarity,
+		\textit{CMake} build tool,
+		unit testing with \textit{Google Test} and \textit{Google Mock},
+		\textit{Clang} toolchain familiarity (\textit{clang-tidy, clang-format, lldb}).
+	\item[Embedded programming and C programming in Linux environment]
+		\textit{STM32} microcontrollers,
+		\textit{FreeRTOS} real time operating system,
+		\textit{make} automation tool.
+	\item[Developer tools]
+		\textit{git} version control system,
+		\textit{docker} containerization,
+		Familiarity with \textit{GitHub Actions, GitLab CI/CD} automation tools,
+		Familiarity with \textit{AWS} cloud computing services and \textit{architecture-as-code} with \textit{Terraform and Ansible},
+		typesetting in \textit{Latex},
+		ability to work in \textit{Scrum}.
+	\item[Linux operating system]
+		administration and development,
+		shell scripting,
+		text processing \textit{awk, sed}.
+	\item[Hardware design and multimedia processing]
+		\textit{Autodesk Fusion360 and Eagle},
+		\textit{Affinity} suite for image editing,
+		\textit{DaVinci Resolve} and \textit{Final Cut Pro X} for video editing.
+	\item[Languages]
+		native Polish,
+		proficient English,
+		basic German.
+\end{description}
+% Scientific publications
+\section*{Scientific publications}
+\hrule \medskip
+\begin{itemize}
+	\item M. Ziaja et al., “Benchmarking Deep Learning for On-Board Space
+		Applications,” Remote Sensing, vol. 13, no. 19, p. 3981, Oct. 2021
+	\item B. Grabowski et al., “Are Cloud Detection U-Nets Robust Against
+		in-Orbit Image Acquisition Conditions?,” IGARSS 2022 -- 2022 IEEE
+		International Geoscience and Remote Sensing Symposium, Kuala Lumpur,
+		Malaysia, 2022, pp. 239-242.
+	\item M. Ziaja, J. Nalepa and M. Kawulok, “Data Augmentation for Multi-Image
+		Super-Resolution,” IGARSS 2022 -- 2022 IEEE International Geoscience and
+		Remote Sensing Symposium, Kuala Lumpur, Malaysia, 2022, pp. 119-122.
+	\item B. Grabowski et al., “Towards Robust Cloud Detection in Satellite
+		Images Using U-Nets,” IGARSS 2021 -- 2021 IEEE International Geoscience
+		and Remote Sensing Symposium, Brussels, Belgium, 2021.
+\end{itemize}
+% Personal projects
+\section*{Personal projects}
+\hrule \medskip
+Please visit my website and GitHub profile for a better insight.
+\begin{description}
+	\item [Data pipeline and dashboard for IT job postings from No Fluff Jobs] \textit{February 2022} \\
+		Data analysis, scrapping, pipelining, storage, and visualisation with Python,
+		\textit{Jupter},
+		\textit{Plotly \& Dash},
+		\textit{Pandas},
+		\textit{AWS \& Terraform \& Ansible}.
+	\item [Algorithms for autonomous vehicles -- Kalman filter based AHRS system] \textit{July 2020} \\
+		Modern C++,
+		\textit{Google Test} and \textit{Google Mock},
+		\textit{CMake} and \textit{GitHub Actions},
+		\textit{Linux I2C} driver in the user space.
+	\item [Software development system for Silesian Aerospace Systems students club] \textit{February 2020} \\
+		Software, toolchain, test suite, and a build system as a base for high altitude balloon/CubeSat development, 
+		\textit{Google Test} \& \textit{Google Mock},
+		\textit{FreeRTOS},
+		\textit{CMake},
+		\textit{GitLab CI/CD},
+		\textit{STM32} with \textit{LibOpenCM3},
+		custom PCB design.
+	\item [High altitude balloon embedded software] \textit{June 2019} \\
+		Modern C++,
+		\textit{ZeroMQ},
+		\textit{spdlog}.
+	\item [Robot with emphasis on control algorithms] \textit{January 2019} \\
+		Custom PCB and 3D printed chassis design,
+		\textit{Arduino} libraries,
+		nested PI controllers for DC motors.
+	\item [Other small software on GitHub]
+\end{description}
+% Personal data agreement
+\vfill
+\small{
+\textit{I agree to the processing of personal data provided in this document for
+realising the recruitment process pursuant to the Personal Data Protection Act
+of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with
+Regulation (EU) 2016/679 of the European Parliament and of the Council of 27
+April 2016 on the protection of natural persons with regard to the processing of
+personal data and on the free movement of such data, and repealing Directive
+95/46/EC (General Data Protection Regulation).}
+}
+\end{document}
