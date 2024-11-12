@@ -1,32 +1,45 @@
 \documentclass{article}
 
+% Geometry fine tuning
 \usepackage{geometry}
-\usepackage{titlesec}
-\usepackage[hidelinks]{hyperref}
-\usepackage{url}
-\usepackage{marginnote}
-\usepackage{lastpage}
-\usepackage{fancyhdr}
+\usepackage{enumitem}
 \usepackage{sectsty} \geometry{
 	left = 3cm,
 	top = 2cm,
 	bottom = 2cm
 }
+% Page layout and widgets
+\usepackage{titlesec}
+\usepackage{marginnote}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+% References
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
 
+%% Configuration
+
+% Make lists more compact and take less space
+\setlist[itemize,enumerate]{itemsep=2pt,parsep=1pt}
+
+% URL style follows text style (no extra decorations)
 \urlstyle{same}
 
+% Fancy section headers with rulers
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand\headrulewidth{0pt}
 \rfoot{\thepage\ of \pageref{LastPage}}
 \reversemarginpar
 
+%% Main document
+
 \begin{document}
 \hfill
 % Contact info
 \begin{minipage}{0.5\textwidth}\raggedleft
 	{\Large \textbf{Maciej Ziaja}} \\
-	Born 22.05.1997 \\
+	%Born 22.05.1997 \\
 	Gliwicka 19 $\circ$ 44--160 Rudno \\
 	+48 729 920 048 $\circ$ maciejzj@icloud.com \\
 	maciejzj.xyz $\circ$ github.com/maciejzj
@@ -44,22 +57,19 @@ deep neural networks for image processing with Python, deployment on embedded
 Linux devices with C++.
 \begin{itemize}
 	\item Involved in creation of several deep learning image processing models
-		for segmentation (roads, buildings, clouds, etc.) and regression tasks
-		(arctic ice cover properties) in satellite imagery. Responsible for
-		data management, preprocessing, training pipelines, model architecture
-		(CNNs and Transformers), and optimization.
+		for segmentation (roads, buildings, clouds, etc.), regression (arctic
+		ice cover properties), and super-resolution (single-image, multi-image,
+		pansharpening) in satellite imagery. Responsible for data management,
+		preprocessing, training pipelines, model architecture (CNN,
+		Transformers, GANs), and optimization.
 	\item Designed neural networks deployment and benchmarking processes for
-		AI-capable state-of-the-art satellite mission Intuition-1. Enabled
-		on-board neural network inference hardware acceleration utilizing
-		\textit{Xilinx's Vitis AI} framework in Python and C++. The satellite
-		platform equipped with the deep learning models currently operates
-		in-orbit.
-	\item Involved in \textit{super-resolution} tasks (single-image,
-		multi-image, pansharpening, data fusion) applied to satellite imagery,
-		such as data generation, dataset curation, and super-resolution deep
-		neural networks training including Transformer-based and GAN models.
+		AI-capable satellite mission Intuition-1. Enabled on-board neural
+		network inference hardware acceleration utilizing \textit{Xilinx's Vitis
+		AI} framework in Python and C++. The satellite platform equipped with
+		the deep learning models currently operates in-orbit.
 	\item Maintained in-house data processing and experimentation MLOps systems
-		based on DVC, MLflow, Docker, and Jenkins.
+		based on DVC, MLflow, Docker, and Jenkins. Deployed selected deep
+		learning models in cloud using Kubernetes and Kubeflow.
 	\item Involved in preparations and orations at various industry and
 		scientific events. Published R\&D research results in several venues
 		redacted by Nature, Springer, and IEEE.
@@ -74,47 +84,51 @@ environment for video processing devices.
 
 \hrule \medskip
 
+{
+% Make sure that itemize inside description behaves correctly
+\setlist[itemize]{topsep=0pt,before=\leavevmode\vspace{-1.5em}}
+\setlist[description]{style=nextline}
 \begin{description}
 	\item[Python programming for machine learning, application development and scripting]
-		deep learning with \textit{Tensorflow} and \textit{PyTorch},
-		machine learning with \textit{scikit-learn},
-		data manipulation with \textit{NumPy} and \textit{Pandas} from SQL and NoSQL sources,
-		data visualization with \textit{Matplotlib} and \textit{Dash \& Plotly} combo,
-		Jupyter notebooks,
-		computer vision with \textit{Scikit-image},
-		data versioning with \textit{DVC},
-		experiment management with \textit{MLflow},
-		code quality with \textit{pytest}, \textit{flake8}, and \textit{mypy}.
+		\begin{itemize}
+			\item Deep learning with \textit{Tensorflow}, \textit{PyTorch} and \textit{PyTorch Lightning},
+			\item Machine learning with \textit{Scikit-learn},
+			\item Data manipulation with \textit{NumPy} and \textit{Pandas} from SQL \& NoSQL sources,
+			\item Computer vision with \textit{Scikit-image} and \textit{Open-CV},
+			\item Experiment and data management with \textit{MLflow}, \textit{Kubeflow}, and \textit{DVC},
+			\item Code quality with \textit{pytest}, \textit{flake8}, and \textit{mypy}.
+		\end{itemize}
 	\item[C++ programming in modern standards]
 		\textit{STL} familiarity,
 		\textit{CMake} build tool,
 		unit testing with \textit{Google Test} and \textit{Google Mock},
 		\textit{Clang} toolchain familiarity (\textit{clang-tidy, clang-format, lldb}).
-	\item[Embedded programming and C programming in Linux environment]
-		\textit{STM32} microcontrollers,
-		\textit{FreeRTOS} real time operating system,
-		\textit{make} automation tool.
+	%\item[Embedded programming and C programming in Linux environment]
+	%	\textit{STM32} microcontrollers,
+	%	\textit{FreeRTOS} real time operating system,
+	%	\textit{make} automation tool.
 	\item[Developer tools]
-		\textit{git} version control system,
-		\textit{docker} containerization,
-		familiarity with \textit{GitHub Actions, GitLab CI/CD} automation tools,
-		familiarity with \textit{AWS} cloud computing services and
-		\textit{architecture-as-code} with \textit{Terraform} and
-		\textit{Ansible}, typesetting in \textit{Latex}, ability to work in
-		\textit{Scrum}.
+			\textit{Git} version control system,
+			\textit{Docker} containerization and \textit{Kubernetes} orchestration,
+			familiarity with \textit{GitHub Actions, GitLab CI/CD} automation tools,
+			familiarity with \textit{AWS} cloud computing services,
+			\textit{architecture-as-code} with \textit{Terraform} and \textit{Ansible}, 
+			typesetting in \textit{Latex},
+			ability to work in \textit{Scrum}.
 	\item[Linux operating system]
-		administration and development,
-		shell scripting,
+		Administration and development,
+		shell scripting (\textit{bash}),
 		text processing with \textit{awk} and \textit{sed}.
-	\item[Hardware design and multimedia processing]
-		\textit{Autodesk Fusion360 and Eagle},
-		\textit{Affinity} suite for image editing,
-		\textit{DaVinci Resolve} and \textit{Final Cut Pro X} for video editing.
+	%\item[Hardware design and multimedia processing]
+	%	\textit{Autodesk Fusion360 and Eagle},
+	%	\textit{Affinity} suite for image editing,
+	%	\textit{DaVinci Resolve} and \textit{Final Cut Pro X} for video editing.
 	\item[Languages]
-		native Polish,
+		Native Polish,
 		proficient English,
 		basic German.
 \end{description}
+}
 
 % Academic education
 \section*{Education}
@@ -124,7 +138,7 @@ environment for video processing devices.
 \marginnote{\small \textit{Since 2022}}
 \noindent
 \textsc{Silesian University of Technology} \\
-\textbf{Doctor of Philisophy (PhD) student} -- \textit{Computer Science, Department of Algorithmics and Software.}
+\textbf{Doctor of Philisophy (PhD) Candidate} -- \textit{Computer Science, Department of Algorithmics and Software.}
 
 \medskip
 \marginnote{\small \textit{2020--2021}}
@@ -146,46 +160,35 @@ Graduated with distinction.
 \section*{Scientific publications}
 \hrule \medskip
 \begin{itemize}
+	\item M. Kawulok et al., Hyperspectral Image Super-Resolution: Task-Based
+		Evaluation, IEEE Journal of Selected Topics in Applied Earth
+		Observations and Remote Sensing, Volume 17, 2024
 	\item B. Grabowski et al., Squeezing adaptive deep learning methods with
 		knowledge distillation for on-board cloud detection, Engineering
-		Applications of Artificial Intelligence, Volume 132, 2024,
+		Applications of Artificial Intelligence, Volume 132, 2024
 	\item P. Kowaleczko et al., A Real-World Benchmark for Sentinel-2
-		Multi-Image Super-Resolution. Sci Data 10, 644 (2023).
+		Multi-Image Super-Resolution. Sci Data 10, 644 (2023)
 	\item M. Ziaja et al Benchmarking Deep Learning for On-Board Space
 		Applications. Remote Sens. 2021, 13, 3981
 	% \item Krauze, P. et al. (2023). Identification of Magnetorheological Damper
 	% 	Model for Off-Road Vehicle Suspension. In: Pawelczyk, M., Bismor, D.,
 	% 	Ogonowski, S., Kacprzyk, J. (eds) Advanced, Contemporary Control. PCC
-	% 	2023. Lecture Notes in Networks and Systems, vol 708. Springer, Cham.
+	% 	2023. Lecture Notes in Networks and Systems, vol 708. Springer, Cham
 	\item M. Ziaja et al., "Hyperspectral Image Pansharpening: The Prisma Case
 		Study," IGARSS 2023 - 2023 IEEE International Geoscience and Remote
-		Sensing Symposium, Pasadena, CA, USA, 2023, pp. 1633-1636.
+		Sensing Symposium, Pasadena, CA, USA, 2023, pp. 1633-1636
 	\item M. Kawulok et al., "Understanding the Value of Hyperspectral Image
 		Super-Resolution from Prisma Data," IGARSS 2023 - 2023 IEEE
 		International Geoscience and Remote Sensing Symposium, Pasadena, CA,
-		USA, 2023, pp. 1489-1492.
+		USA, 2023, pp. 1489-1492
 	\item B. Grabowski et al., "Are Cloud Detection U-Nets Robust Against
 		in-Orbit Image Acquisition Conditions?," IGARSS 2022 - 2022 IEEE
 		International Geoscience and Remote Sensing Symposium, Kuala Lumpur,
-		Malaysia, 2022, pp. 239-242.
+		Malaysia, 2022, pp. 239-242
 	\item B. Grabowski, M. Ziaja, M. Kawulok and J. Nalepa, "Towards Robust
 		Cloud Detection in Satellite Images Using U-Nets," 2021 IEEE
 		International Geoscience and Remote Sensing Symposium IGARSS, Brussels,
-		Belgium, 2021, pp. 4099-4102.
-\end{itemize}
-	
-\section*{Personal projects}
-\hrule \medskip
-\begin{itemize}
-	\item \textit{IT Jobs Meta} -- Data pipeline and meta-analysis
-		dashboard for IT job postings from \textit{No Fluff Jobs} website.
-		Features data scraping, cleaning, analysis, and interactive dashboard.
-		Implemented in \textit{Python} and \textit{Pandas}, deployed with
-		\textit{Ansible} and \textit{Terraform} to \textit{AWS}, available
-		online at itjobsmeta.net.
-	\item Other small software on my \href{https://github.com/maciejzj}{GitHub}:
-		Linux dotfiles, mobile robot, shell-based blogging engine, high-altitude
-		balloon embedded software, and more.
+		Belgium, 2021, pp. 4099-4102
 \end{itemize}
 
 \section*{Certficicates}
@@ -193,6 +196,20 @@ Graduated with distinction.
 \begin{itemize}
 	\item October 2021 -- \textit{AWS Cloud Technical Essentials} authorized by Amazon Web
 	Services, offered through Coursera platform.
+\end{itemize}
+
+\section*{Personal projects}
+\hrule \medskip
+\begin{itemize}
+	\item \textit{IT Jobs Meta} -- Data pipeline and meta-analysis
+		dashboard for IT job postings from \textit{No Fluff Jobs} website.
+		Features data scraping, cleaning, analysis, and interactive dashboard.
+		Implemented in \textit{Python} and \textit{Pandas}, deployed with
+		\textit{Ansible} and \textit{Terraform} to \textit{AWS}.
+		%, available online at itjobsmeta.net.
+	\item Other small software on my \href{https://github.com/maciejzj}{GitHub}:
+		Linux dotfiles, mobile robot, shell-based blogging engine, high-altitude
+		balloon embedded software, and more.
 \end{itemize}
 
 \vfill
